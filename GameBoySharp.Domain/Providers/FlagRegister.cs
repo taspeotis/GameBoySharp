@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Composition;
+using System.ComponentModel.Composition;
 using GameBoySharp.Domain.Contracts;
 
 namespace GameBoySharp.Domain.Providers
 {
-    [Export(typeof (IFlagRegister)), Shared]
+    [Export(typeof (IFlagRegister))]
     internal sealed class FlagRegister : IFlagRegister
     {
         private readonly IRegisters _registers;

@@ -2,10 +2,10 @@
 {
     public interface IReadableMemory
     {
-        byte ReadByte(short address);
+        byte ReadByte(ushort address, ushort offset = 0);
         
-        short ReadableFrom { get; }
+        ushort ReadableFrom { get; }
 
-        short ReadableTo { get; }
+        ushort ReadableTo { get; }
     }
 }

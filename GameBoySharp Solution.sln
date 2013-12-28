@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameBoySharp.Tests", "GameBoySharp.Tests\GameBoySharp.Tests.csproj", "{8774C430-4409-48F2-96A5-1347DD5B3B3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{214643D7-CB62-4787-B5DB-08DDE54DF30F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6C32BB25-56E0-4C8D-B95A-6CFCD42C96CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C32BB25-56E0-4C8D-B95A-6CFCD42C96CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C32BB25-56E0-4C8D-B95A-6CFCD42C96CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8774C430-4409-48F2-96A5-1347DD5B3B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8774C430-4409-48F2-96A5-1347DD5B3B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8774C430-4409-48F2-96A5-1347DD5B3B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8774C430-4409-48F2-96A5-1347DD5B3B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214643D7-CB62-4787-B5DB-08DDE54DF30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214643D7-CB62-4787-B5DB-08DDE54DF30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214643D7-CB62-4787-B5DB-08DDE54DF30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214643D7-CB62-4787-B5DB-08DDE54DF30F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

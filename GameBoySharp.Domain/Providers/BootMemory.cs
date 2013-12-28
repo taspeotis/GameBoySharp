@@ -1,10 +1,10 @@
-﻿using System.Composition;
+﻿using System.ComponentModel.Composition;
 using GameBoySharp.Domain.Contracts;
 
 namespace GameBoySharp.Domain.Providers
 {
-    [Export(typeof (IBootMemory)), Shared]
-    internal sealed class BootMemory : IBootMemory
+    [Export(typeof (IReadableMemory))]
+    internal sealed class BootMemory : IReadableMemory
     {
         private static readonly byte[] Memory =
         {
@@ -26,19 +26,21 @@ namespace GameBoySharp.Domain.Providers
             0xF5, 0x06, 0x19, 0x78, 0x86, 0x23, 0x05, 0x20, 0xFB, 0x86, 0x20, 0xFE, 0x3E, 0x01, 0xE0, 0x50
         };
 
-        public byte ReadByte(short address)
+        public byte ReadByte(ushort address, ushort offset)
         {
+            address += offset;
+
             return Memory[address];
         }
 
-        public short ReadableFrom
+        public ushort ReadableFrom
         {
             get { return 0; }
         }
 
-        public short ReadableTo
+        public ushort ReadableTo
         {
-            get { return (short) (Memory.Length + 1); }
+            get { return (ushort) (Memory.Length + 1); }
         }
     }
 }

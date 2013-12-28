@@ -5,19 +5,19 @@
         byte A { get; set; }
 
         // ReSharper disable once InconsistentNaming
-        short AF { get; set; }
+        ushort AF { get; set; }
 
         byte B { get; set; }
 
         // ReSharper disable once InconsistentNaming
-        short BC { get; set; }
+        ushort BC { get; set; }
 
         byte C { get; set; }
 
         byte D { get; set; }
 
         // ReSharper disable once InconsistentNaming
-        short DE { get; set; }
+        ushort DE { get; set; }
 
         byte E { get; set; }
 
@@ -26,14 +26,14 @@
         byte H { get; set; }
 
         // ReSharper disable once InconsistentNaming
-        short HL { get; set; }
+        ushort HL { get; set; }
 
         byte L { get; set; }
 
         // ReSharper disable once InconsistentNaming
-        short PC { get; set; }
+        ushort PC { get; set; }
 
         // ReSharper disable once InconsistentNaming
-        short SP { get; set; }
+        ushort SP { get; set; }
     }
 }

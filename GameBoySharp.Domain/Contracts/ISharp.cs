@@ -2,8 +2,6 @@
 {
     public interface ISharp
     {
-        short StackPointer { get; set; }
-
-        short ProgramCounter { get; set; }
+        void ExecuteOperation();
     }
 }

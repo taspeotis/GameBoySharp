@@ -2,12 +2,12 @@
 {
     public interface IWriteableMemory
     {
-        void WriteByte(short address, byte value);
+        void WriteByte(ushort address, byte value, ushort offset = 0);
 
         // TODO: Extension method for WriteShort
 
-        short WriteableFrom { get; }
+        ushort WriteableFrom { get; }
 
-        short WriteableTo { get; }
+        ushort WriteableTo { get; }
     }
 }

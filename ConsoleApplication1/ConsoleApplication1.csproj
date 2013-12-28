@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6C32BB25-56E0-4C8D-B95A-6CFCD42C96CD}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{214643D7-CB62-4787-B5DB-08DDE54DF30F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GameBoySharp.Domain</RootNamespace>
-    <AssemblyName>GameBoySharp.Domain</AssemblyName>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,28 +36,25 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IFlagRegister.cs" />
-    <Compile Include="Contracts\IContiguousMemory.cs" />
-    <Compile Include="Contracts\IInstruction.cs" />
-    <Compile Include="Contracts\IInstructions.cs" />
-    <Compile Include="Contracts\IReadableMemory.cs" />
-    <Compile Include="Contracts\IWriteableMemory.cs" />
-    <Compile Include="Contracts\IRegisters.cs" />
-    <Compile Include="Contracts\ISharp.cs" />
-    <Compile Include="Extensions\IReadableMemoryExtensions.cs" />
-    <Compile Include="Infrastructure\Bootstrapper.cs" />
-    <Compile Include="Infrastructure\Instruction.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\BootMemory.cs" />
-    <Compile Include="Providers\FlagRegister.cs" />
-    <Compile Include="Providers\ContiguousMemory.cs" />
-    <Compile Include="Providers\LoadUInt16Instructions.cs" />
-    <Compile Include="Providers\Registers.cs" />
-    <Compile Include="Providers\Sharp.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameBoySharp.Domain\GameBoySharp.Domain.csproj">
+      <Project>{6c32bb25-56e0-4c8d-b95a-6cfcd42c96cd}</Project>
+      <Name>GameBoySharp.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
